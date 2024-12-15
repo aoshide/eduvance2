@@ -8,21 +8,21 @@ const CoursesPage = () => {
       title: "React для начинающих", 
       description: "Изучите основы React.js и начните создавать свои приложения.",
       image: "/images/react-course.jpg",
-      link: "/course/react"
+      link: "/Courses/react"
     },
     { 
       id: 2, 
       title: "JavaScript глубокое погружение", 
       description: "Разберитесь с современным JavaScript, включая ES6+.",
       image: "/images/javascript-course.jpg",
-      link: "/course/javascript"
+      link: "/Courses/javascript"
     },
     { 
       id: 3, 
       title: "Веб-дизайн и UX/UI", 
       description: "Научитесь создавать удобные и красивые интерфейсы.",
       image: "/images/design-course.jpg",
-      link: "/course/design"
+      link: "/Courses/design"
     },
   ];
 
