@@ -1,0 +1,103 @@
+.about-container {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .about-header {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #34495e;  /* Тёмный оттенок для заголовков */
+  }
+  
+  .about-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;  /* Темный цвет для заголовка */
+    margin-bottom: 10px;
+  }
+  
+  .about-header p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+  
+  /* Сетка для контента "О нас" */
+  .about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));  /* Автоматическая сетка с адаптивными колонками */
+    gap: 30px;
+    padding: 0 20px;
+    margin-top: 30px;
+  }
+  
+  /* Стили для ячеек */
+  .about-grid-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);  /* Тень для плавного эффекта */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .about-grid-item:hover {
+    transform: translateY(-10px);  /* Легкий подъем ячейки при наведении */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);  /* Увеличенная тень для эффекта */
+  }
+  
+  .about-grid-item h2 {
+    font-size: 2rem;
+    color: #379777;  /* Основной цвет для заголовков */
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  .about-grid-item p {
+    font-size: 1.1rem;
+    color: #34495e;
+    line-height: 1.8;
+  }
+  
+  .about-grid-item ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .about-grid-item ul li {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    color: #7f8c8d;
+  }
+  
+  .about-grid-item a {
+    color: #379777;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .about-grid-item a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Адаптивные стили для мобильных устройств */
+  @media (max-width: 768px) {
+    .about-container {
+      padding: 15px;
+    }
+  
+    .about-header h1 {
+      font-size: 2.5rem;
+    }
+  
+    .about-header p {
+      font-size: 1rem;
+    }
+  
+    .about-grid {
+      padding: 0 10px;
+    }
+  }
+  

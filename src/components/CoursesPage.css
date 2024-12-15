@@ -1,0 +1,140 @@
+  body {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+
+  .courses-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон для блока */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+
+  .courses-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .courses-list {
+    display: flex;
+    flex-wrap: wrap; /* Элементы на нескольких строках */
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .course {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    text-align: center;
+  }
+
+  .course h2 {
+    margin: 0 0 10px;
+    font-size: 1em;
+  }
+
+  .course p {
+    margin: 0;
+    color: #555;
+    font-size: 0.9em;
+  }
+  .course {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Текст снизу */
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background: #fff;
+    overflow: hidden; /* Обрезаем лишнее */
+    position: relative;
+  }
+
+  .course-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover; /* Масштабируем изображение */
+    background-position: center;
+    z-index: 0; /* Под текстом */
+    filter: brightness(0.7); /* Затемняем для контраста текста */
+  }
+
+  .course h2,
+  .course p {
+    margin: 0;
+    z-index: 1; /* Над изображением */
+    color: #fff;
+  }
+
+  .course h2 {
+    font-size: 1em;
+    margin-bottom: 5px;
+  }
+
+  .course p {
+    font-size: 0.9em;
+  }
+  .progress-container {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  input[type="number"] {
+    margin: 10px 0;
+    padding: 5px;
+    width: 80px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+    
+  .progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 5px;
+  }
+  
+  .progress-bar-fill {
+    height: 100%;
+    background-color: #4caf50;
+    transition: width 0.3s ease;
+  }
+  /* Эффект при наведении на карточку курса */
+.course:hover {
+  transform: scale(1.05); /* Увеличиваем размер */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Увеличиваем тень */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавный переход */
+}
+
+/* Для картинки курсора */
+.course:hover .course-image {
+  filter: brightness(0.9); /* Легкое осветление изображения при наведении */
+}
+
+

@@ -1,0 +1,333 @@
+body {
+    background-color: #F6FCDF;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    color: #ffffff;
+}
+
+ul, ol {
+    padding-left: 20px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.intro .tagline {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.intro .welcome {
+    font-size: 1.2rem;
+    color: #4e5456;
+}
+
+/* Секции */
+.section {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    border-left: 5px solid #138052;
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+.section .offer-list, .section .benefits-list {
+    list-style: none;
+    padding: 0;
+}
+
+.section .offer-list li, .section .benefits-list li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #eaf4fc;
+    border: 1px solid #cce0f1;
+    border-radius: 5px;
+}
+
+/* Call to Action */
+.cta {
+    background-color: #E88D67;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.cta .cta-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #eaf4fc;
+}
+
+.cta .steps-list {
+    text-align: left;
+    color: white;
+}
+
+.cta .steps-list li {
+    margin-bottom: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #379777;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: white;
+}
+
+.header .navigation ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header .navigation ul li {
+    margin: 0 1.5rem;
+}
+
+.header .navigation ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    position: relative;  
+    transition: color 0.3s ease;
+}
+
+/* Подчеркивание появляется при hover */
+.header .navigation ul li a:hover {
+    color: #daafd9;
+}
+
+/* Псевдоэлемент для подчеркивания */
+.header .navigation ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;  /* Отступ снизу */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #e4aae3;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+/* Подчеркивание появляется при hover */
+.header .navigation ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* Footer */
+footer {
+    background-color: #0d2850;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+footer a:hover {
+    text-decoration: underline;
+    transform: scale(1.1);
+    color: #eaf4fc;
+}
+footer a {
+    color: #3498db;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+footer a:after {
+    content: "";
+    position: absolute;
+    bottom: -3px; /* Отступ снизу */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #3498db;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+footer a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Основные стили для Dashboard */
+.dashboard {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Заголовок */
+.dashboard h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Стили для формы редактирования */
+.edit-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-form label {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.edit-form input, .edit-form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.edit-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Кнопка "Сохранить" */
+.edit-form button {
+    background-color: #E88D67;
+    color: white;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.edit-form button:hover {
+    background-color: #F3D0D7;
+}
+
+/* Стиль для отображения информации пользователя */
+.user-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.user-info p {
+    margin-bottom: 12px;
+}
+
+.user-info p strong {
+    font-weight: bold;
+}
+
+.user-info button {
+    background-color: #E88D67;
+    color: white;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+.user-info button:hover {
+    background-color: #F3D0D7;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .dashboard {
+        padding: 15px;
+    }
+
+    .dashboard h1 {
+        font-size: 1.6rem;
+    }
+
+    .edit-form input, .edit-form textarea {
+        font-size: 0.9rem;
+    }
+
+    .edit-form button {
+        font-size: 1rem;
+    }
+
+    .user-info p {
+        font-size: 1rem;
+    }
+
+    .user-info button {
+        font-size: 1rem;
+    }
+}
+body {
+    background: url('https://png.pngtree.com/background/20211215/original/pngtree-modern-simple-elegant-gradinet-green-landing-page-website-background-picture-image_1455074.jpg') no-repeat center center fixed;
+    background-size: cover; /* Масштабирование изображения */
+  }
+.button-transtioncont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 60px;
+    background-color: #c6e1c7;
+    border: 2px solid #d9ead9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.button-transitioncont:hover {
+    background-color: #8fddc8;
+}
+.button-transition{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
