@@ -5,12 +5,17 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
-  pointer-events: all; /* Включаем взаимодействие с модальным окном */
+  z-index: 1000; /* Поверх всех остальных элементов */
+  opacity: 0; /* Скрыто по умолчанию */
+  transition: opacity 0.3s ease-in-out; /* Плавное появление */
+}
+
+.modal-overlay.active {
+  opacity: 1; /* Делает модальное окно видимым */
 }
 
 /* Содержание модального окна */
@@ -19,13 +24,11 @@
   background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 90%;
   max-width: 500px;
-  max-height: 90%;
-  overflow-y: auto;
-  animation: scaleUp 0.3s ease-in-out;
-  pointer-events: all; /* Включаем взаимодействие с контентом модального окна */
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1010; /* Содержимое модального окна поверх overlay */
+  overflow-y: auto; /* Прокрутка, если содержимое превышает размер окна */
 }
 
 /* Кнопка закрытия */
@@ -37,7 +40,7 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  z-index: 10;
+  cursor: pointer;
   transition: color 0.3s ease;
   padding: 5px;
   border-radius: 50%;
@@ -47,7 +50,7 @@
   color: #9d0404;
 }
 
-/* Анимации */
+/* Анимация появления */
 @keyframes scaleUp {
   from {
     transform: scale(0.8);
@@ -57,6 +60,32 @@
   }
 }
 
+.modal-content {
+  animation: scaleUp 0.3s ease-in-out; /* Плавное появление */
+}
+
+/* Запрещаем прокрутку страницы при открытом модальном окне */
 body.modal-open {
-  pointer-events: none; 
+  overflow: hidden;
+}
+
+/* Заголовки и текст */
+h2 {
+  text-align: center;
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.lesson-content {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 10px;
 }

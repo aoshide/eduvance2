@@ -1,80 +1,133 @@
-body{
+body {
     font-family: 'Nunito', sans-serif;
-}
-.registration-modal {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Регистрационная форма */
+  .registration-form {
+    position: relative;
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* Форма ниже модального окна */
+  }
+  
+  /* Скрытие регистрационной формы при открытом модальном окне */
+  .registration-form.hidden {
+    display: none;
+  }
+  
+  /* Стиль для заголовка регистрационной формы */
+  .registration-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+  }
+  
+  /* Модальное окно */
+  .registration-modal {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
-    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none; /* Скрыто по умолчанию */
     justify-content: center;
     align-items: center;
-    z-index: 100;
-}
+    z-index: 1000; /* Модальное окно сверху */
+  }
   
-.modalr-content {
+  /* Активное состояние модального окна */
+  .registration-modal.active {
+    display: flex;
+  }
+  
+  /* Содержание модального окна */
+  .modalr-content {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    width: 100%;
     max-width: 400px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-}
+    align-items: center;
+    z-index: 1010; /* Модальное окно поверх overlay */
+  }
   
-.modalr-content h2 {
-    text-align: center;
+  /* Стиль заголовка в модальном окне */
+  .modalr-content h2 {
     margin-bottom: 20px;
-    font-size: 1.5em;
-}
+  }
   
-.form-group {
-    margin-bottom: 15px;
-}
-  
-.form-group label {
-    display: block;
-    font-size: 1em;
-    margin-bottom: 5px;
-    color: #333;
-}
-  
-.form-group input {
-    width: 100%;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1em;
-    transition: border 0.3s ease-in-out;
-}
-  
-.form-group input:focus {
-    border-color: #007BFF;
-    outline: none;
-}
-  
-.rutton {
-    width: 100%;
-    padding: 12px;
-    background-color: #007BFF;
-    color: #fff;
+  /* Кнопка в модальном окне */
+  .modalr-content button {
+    background: none;
     border: none;
-    border-radius: 4px;
-    font-size: 1.1em;
+    color: #007BFF;
+    font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    margin-top: 10px; /* Отступ сверху, чтобы кнопка не была прижата к полям */
-}
+    margin-top: 20px;
+  }
   
-.rutton:hover {
-    background-color: #0056b3;
-}
+  /* Ховер на кнопку */
+  .modalr-content button:hover {
+    color: #0056b3;
+  }
   
-.rutton:active {
-    background-color: #004085;
-}
+  /* Фон для модального окна */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 900; /* Overlay под модальным окном */
+    pointer-events: all; /* Слушаем события кликов на фоне */
+  }
+  
+  /* Кнопка закрытия */
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #333;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 5px;
+    border-radius: 50%;
+  }
+  
+  /* Ховер на кнопку закрытия */
+  .close-btn:hover {
+    color: #9d0404;
+  }
+  
+  /* Анимация открытия модального окна */
+  @keyframes scaleUp {
+    from {
+      transform: scale(0.8);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  /* Запрещаем прокрутку страницы при открытом модальном окне */
+  body.modal-open {
+    overflow: hidden;
+  }
   
