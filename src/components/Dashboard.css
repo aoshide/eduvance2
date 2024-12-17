@@ -1,0 +1,123 @@
+.register {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 50px auto;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+.register h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #379777;
+    margin-bottom: 20px;
+}
+
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+}
+
+    
+.register-form label {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+
+.register-form input,
+.register-form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.register-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+
+.register-form input:focus,
+.register-form textarea:focus {
+    border-color: #379777;
+    outline: none;
+    box-shadow: 0 0 5px rgba(55, 151, 119, 0.5);
+}
+
+
+.register-form button {
+    background-color: #379777;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+.register-form button:hover {
+    background-color: #92f3b6;
+    transform: translateY(-2px);
+}
+
+
+.register-form button:active {
+    background-color: #216950;
+    transform: translateY(0);
+}
+.navigation-button {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    background-color: #379777; 
+    color: white; 
+    padding: 10px 70px;
+    font-size: 16px; 
+    border: none;
+    border-radius: 9px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+}
+
+.navigation-button:hover {
+    background-color: #92f097;
+}
+
+.navigation-button:focus {
+    outline: none;
+}
+
+
+
+@media (max-width: 768px) {
+    .register {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .register h1 {
+        font-size: 1.5rem;
+    }
+
+    .register-form input,
+    .register-form textarea {
+        font-size: 0.9rem;
+    }
+
+    .register-form button {
+        font-size: 0.9rem;
+    }
+}

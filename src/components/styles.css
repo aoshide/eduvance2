@@ -125,16 +125,16 @@ ul, ol {
     transition: color 0.3s ease;
 }
 
-/* Подчеркивание появляется при hover */
+
 .header .navigation ul li a:hover {
     color: #daafd9;
 }
 
-/* Псевдоэлемент для подчеркивания */
+
 .header .navigation ul li a::after {
     content: "";
     position: absolute;
-    bottom: -5px;  /* Отступ снизу */
+    bottom: -5px;  
     left: 0;
     width: 100%;
     height: 2px;
@@ -143,17 +143,18 @@ ul, ol {
     transition: transform 0.3s ease;
 }
 
-/* Подчеркивание появляется при hover */
+
 .header .navigation ul li a:hover::after {
     transform: scaleX(1);
 }
 
 
-/* Footer */
+
 footer {
     background-color: #0d2850;
     color: white;
     padding: 20px;
+    height: 50vh;
     text-align: center;
     font-size: 0.9rem;
 }
@@ -171,7 +172,7 @@ footer a {
 footer a:after {
     content: "";
     position: absolute;
-    bottom: -3px; /* Отступ снизу */
+    bottom: -3px;
     left: 0;
     width: 100%;
     height: 2px;
@@ -183,7 +184,7 @@ footer a:hover::after {
     transform: scaleX(1);
 }
 
-/* Основные стили для Dashboard */
+
 .dashboard {
     background-color: #fff;
     padding: 20px;
@@ -193,14 +194,14 @@ footer a:hover::after {
     margin: 0 auto;
 }
 
-/* Заголовок */
+
 .dashboard h1 {
     font-size: 2rem;
     color: #333;
     margin-bottom: 20px;
 }
 
-/* Стили для формы редактирования */
+
 .edit-form {
     display: flex;
     flex-direction: column;
@@ -227,9 +228,9 @@ footer a:hover::after {
     min-height: 100px;
 }
 
-/* Кнопка "Сохранить" */
+
 .edit-form button {
-    background-color: #E88D67;
+    background-color: #216950;
     color: white;
     padding: 12px;
     font-size: 1rem;
@@ -241,10 +242,17 @@ footer a:hover::after {
 }
 
 .edit-form button:hover {
-    background-color: #F3D0D7;
+    background-color: #92f3b6;
+    transform: translateY(-2px);
+}
+.edit-form input:focus,
+.edit-form textarea:focus {
+    border-color: #379777;
+    outline: none;
+    box-shadow: 0 0 5px rgba(55, 151, 119, 0.5);
 }
 
-/* Стиль для отображения информации пользователя */
+
 .user-info {
     display: flex;
     flex-direction: column;
@@ -261,7 +269,7 @@ footer a:hover::after {
 }
 
 .user-info button {
-    background-color: #E88D67;
+    background-color: #216950;
     color: white;
     padding: 12px;
     font-size: 1rem;
@@ -272,12 +280,18 @@ footer a:hover::after {
     box-sizing: border-box;
     margin-top: 20px;
 }
-
-.user-info button:hover {
-    background-color: #F3D0D7;
+.user-info button:active {
+    background-color: #216950;
+    transform: translateY(0);
 }
 
-/* Адаптивность для мобильных устройств */
+
+.user-info button:hover {
+    background-color: #92f3b6;
+    transform: translateY(-2px);
+}
+
+
 @media (max-width: 768px) {
     .dashboard {
         padding: 15px;
@@ -305,7 +319,7 @@ footer a:hover::after {
 }
 body {
     background: url('https://png.pngtree.com/background/20211215/original/pngtree-modern-simple-elegant-gradinet-green-landing-page-website-background-picture-image_1455074.jpg') no-repeat center center fixed;
-    background-size: cover; /* Масштабирование изображения */
+    background-size: cover; 
   }
 .button-transtioncont {
     display: flex;

@@ -13,11 +13,11 @@ function Footer() {
         <div>
           <h4 style={{ fontSize: '18px' }}>Быстрые ссылки</h4>
           <ul style={{ listStyleType: 'none', padding: 0 }}>
-            <li><Link to="/" style={{ color: 'white', textDecoration: 'none' }}>Главная</Link></li>
+            <li><Link to="/main " style={{ color: 'white', textDecoration: 'none' }}>Главная</Link></li>
             <li><Link to="/Courses" style={{ color: 'white', textDecoration: 'none' }}>Курсы</Link></li>
             <li><Link to="/Forum" style={{ color: 'white', textDecoration: 'none' }}>Форум</Link></li>
             <li><Link to="/About" style={{ color: 'white', textDecoration: 'none' }}>О нас</Link></li>
-            <li><Link to="/Dashboard" style={{ color: 'white', textDecoration: 'none' }}>Личный Кабинет</Link></li>
+            <li><Link to="/" style={{ color: 'white', textDecoration: 'none' }}>Личный Кабинет</Link></li>
           </ul>
         </div>
         <div>
@@ -28,7 +28,7 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <div style={{ textAlign: 'center', marginTop: '20px', fontSize: '14px' }}>
+      <div style={{ textAlign: 'center', marginTop: '95px', fontSize: '14px' }}>
         <p>&copy; 2024 Образовательный сайт. Все права защищены.</p>
       </div>
     </footer>

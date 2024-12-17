@@ -10,11 +10,11 @@ function Header() {
       </div>
       <nav className="navigation">
         <ul>
-          <li><Link to="/">Главная</Link></li>
+          <li><Link to="/main">Главная</Link></li>
           <li><Link to="/Courses">Курсы</Link></li>
           <li><Link to="/Forum">Чат / Форум</Link></li>
           <li><Link to="/About">О нас</Link></li>
-          <li><Link to="/dashboard">Личный Кабинет 🪪</Link></li>
+          <li><Link to="/">Личный Кабинет 🪪</Link></li>
           <li><Link to="*"></Link></li>
         </ul>
       </nav>
