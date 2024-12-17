@@ -14,10 +14,10 @@ function Footer() {
           <h4 style={{ fontSize: '18px' }}>Быстрые ссылки</h4>
           <ul style={{ listStyleType: 'none', padding: 0 }}>
             <li><Link to="/" style={{ color: 'white', textDecoration: 'none' }}>Главная</Link></li>
-            <li><Link to="/courses" style={{ color: 'white', textDecoration: 'none' }}>Курсы</Link></li>
-            <li><Link to="/forum" style={{ color: 'white', textDecoration: 'none' }}>Форум</Link></li>
-            <li><Link to="/about" style={{ color: 'white', textDecoration: 'none' }}>О нас</Link></li>
-            <li><Link to="/dashboard" style={{ color: 'white', textDecoration: 'none' }}>Личный Кабинет</Link></li>
+            <li><Link to="/Courses" style={{ color: 'white', textDecoration: 'none' }}>Курсы</Link></li>
+            <li><Link to="/Forum" style={{ color: 'white', textDecoration: 'none' }}>Форум</Link></li>
+            <li><Link to="/About" style={{ color: 'white', textDecoration: 'none' }}>О нас</Link></li>
+            <li><Link to="/Dashboard" style={{ color: 'white', textDecoration: 'none' }}>Личный Кабинет</Link></li>
           </ul>
         </div>
         <div>
