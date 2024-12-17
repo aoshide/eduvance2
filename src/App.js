@@ -11,33 +11,12 @@ import Undefined from './components/Undefined';
 import JavaScript from './components/courses/JavaScript';
 import Design from './components/courses/Design';
 import ReactIntro from './components/courses/ReactIntro';
-import Registration from './components/Registration';
 
 function App() {
-  const [userData, setUserData] = useState(null);
-  const [isRegistered, setIsRegistered] = useState(false);
-
-  useEffect(() => {
-    // Проверяем в localStorage, был ли пользователь зарегистрирован
-    const storedRegistration = localStorage.getItem('isRegistered');
-    if (storedRegistration === 'true') {
-      setIsRegistered(true);
-    }
-  }, []);
-
-  const handleRegistration = (data) => {
-    setUserData(data);
-    setIsRegistered(true);
-    console.log('User registered:', data);
-    localStorage.setItem('isRegistered', 'true'); // Сохраняем информацию о регистрации
-  };
-
   return (
     <Router>
       <Header />
       <main>
-        {!isRegistered && <Registration onRegister={handleRegistration} />}
-        {isRegistered && (
           <Routes>
             <Route path="/" element={<Main userData={userData} />} />
             <Route path="/Courses" element={<Courses />} />
@@ -49,7 +28,6 @@ function App() {
             <Route path="/Courses/javascript" element={<JavaScript />} />
             <Route path="/courses/react" element={<ReactIntro />} />
           </Routes>
-        )}
       </main>
       <Footer />
     </Router>
