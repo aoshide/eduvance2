@@ -18,11 +18,11 @@ function App() {
       <Header />
       <main>
           <Routes>
-            <Route path="/" element={<Main userData={userData} />} />
+            <Route path="/" element={<Main />} />
             <Route path="/Courses" element={<Courses />} />
             <Route path="/Forum" element={<Forum />} />
             <Route path="/About" element={<About />} />
-            <Route path="/dashboard" element={<Dashboard userData={userData} />} />
+            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="*" element={<Undefined />} />
             <Route path="/Courses/design" element={<Design />} />
             <Route path="/Courses/javascript" element={<JavaScript />} />
