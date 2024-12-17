@@ -11,10 +11,6 @@ import Undefined from './components/Undefined';
 import JavaScript from './components/courses/JavaScript';
 import Design from './components/courses/Design';
 import ReactIntro from './components/courses/ReactIntro';
-import LessonDetails from './components/courses/LessonDetails';
-import ReactAdvanced from './components/courses/ReactAdvanced';
-import JavaScriptAdvanced from './components/courses/JavaScriptAdvanced';
-import DesignAdvanced from './components/courses/DesignAdvanced';
 import Registration from './components/Registration';
 
 function App() {
@@ -52,10 +48,6 @@ function App() {
             <Route path="/Courses/design" element={<Design />} />
             <Route path="/Courses/javascript" element={<JavaScript />} />
             <Route path="/courses/react" element={<ReactIntro />} />
-            <Route path="/Courses/lesson/:lessonId" component={LessonDetails} />
-            <Route path="/Courses/react-advanced" component={ReactAdvanced} />
-            <Route path="/Courses/javascript-advanced" component={JavaScriptAdvanced} />
-            <Route path="/Courses/design-advanced" component={DesignAdvanced} />
           </Routes>
         )}
       </main>
